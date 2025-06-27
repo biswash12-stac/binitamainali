@@ -847,57 +847,8 @@ h2 {
     }
 }
 
-/* .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
 
-.feature-card {
-    background-color: var(--light-color);
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    transition: var(--transition);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.feature-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.feature-card a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 4px;
-}
-
-.feature-card a:hover {
-    background-color: var(--secondary-color);
-} */
-
-.about-creativity {
-    background-color: var(--light-color);
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 3rem 0;
-}
 
 /* Curriculum Page Specific */
 .strategies {
@@ -1118,6 +1069,55 @@ footer p {
     }
 }
 
+
+/* art.html uppdated */
+
+ .strategy-img {
+        width: 250px; /* Fixed width for consistency */
+        height: 180px; /* Fixed height to maintain aspect ratio */
+        object-fit: cover; /* Ensures images fill space without distortion */
+        border-radius: 8px;
+        display: block; /* Removes inline spacing */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+        border: 1px solid #eee; /* Light border */
+        transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+
+    .strategy-img:hover {
+        transform: scale(1.03); /* Slight zoom on hover */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .strategy-img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+    }
+
+    /* Enhanced Reflection Cards */
+    .reflection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px; /* Slightly larger gap */
+    }
+
+    .reflection-card {
+        background: #f9f4e8;
+        padding: 25px;
+        border-radius: 12px; /* Smoother corners */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .reflection-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 15px;
+    }
+
 /* Accordion Styles */
 .strategy h4 {
     cursor: pointer;
@@ -1211,3 +1211,113 @@ footer p {
 main {
     animation: fadeIn 0.5s ease-out;
 }
+
+
+/* updated art.html v2 */
+.new-section { margin-bottom: 2rem; }
+.new-two-column { display: flex; gap: 2rem; }
+/* .new-image { max-width: 100%; height: auto; } */
+.new-quote-box { background: #f9f4e8; padding: 1rem; }
+.new-three-column { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.new-highlight-box { background: #e3f2fd; padding: 1.5rem; }
+
+
+.new-image {
+    width: 300px;       /* Fixed medium width */
+    height: 225px;      /* Maintains 4:3 aspect ratio */
+    object-fit: cover;  /* Ensures no distortion */
+    border-radius: 8px; /* Matches existing style */
+    margin: 0 auto;     /* Centers the image */
+    display: block;     /* Removes inline spacing */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .new-image {
+        width: 100%;    /* Full width on mobile */
+        max-width: 300px;
+        height: auto;   /* Flexible height */
+    }
+}
+
+/* Existing preserved styles below */
+.new-full-width-image{
+    width: 300px;
+    height: 225px;
+    object-fit: cover;
+    border-radius:8px ;
+    display: block;
+}
+
+
+ /* Art Importance Section Styling */
+    .art-importance-section {
+        margin-bottom: 2.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .art-importance-container {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .art-text-content {
+        flex: 1;
+        min-width: 50%;
+    }
+
+    .art-image-content {
+        flex: 1;
+        min-width: 40%;
+        text-align: center;
+    }
+
+    .art-featured-image {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .art-quote {
+        background: #f8f4e5;
+        padding: 1.2rem;
+        border-left: 4px solid #F9A825;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    .section-icon {
+        color: #4CAF50;
+        margin-right: 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .art-importance-container {
+            flex-direction: column;
+        }
+        
+        .art-text-content,
+        .art-image-content {
+            min-width: 100%;
+        }
+        
+        .art-featured-image {
+            max-width: 100%;
+        }
+    }
+
+
+    .add{
+        position: relative;
+        bottom: 250px;
+        left: 300px;
+    }
